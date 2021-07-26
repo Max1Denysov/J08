@@ -1,13 +1,14 @@
 
 class test{
-    int stck[] = new int[10];
-    int tos;
-    test(){
+    private int stck[] = new int[10];
+    private int tos;
+    test(int size){
+        stck = new int[size];
         tos = -1;
 
     }
     void push(int item){
-        if (tos == 9)
+        if (tos == stck.length - 1)
             System.out.println("Stack full");
 
         else
@@ -27,19 +28,26 @@ class test{
 
 public class Stack {
     public static void main(String args[]){
-        test mystack1 = new test();
-        test mystack2 = new test();
+        test mystack1 = new test(5);
+        test mystack2 = new test(8);
 
-        for(int i = 0 ; i < 10 ; i++) mystack1.push(i);
-        for(int i = 10 ; i < 20 ; i++) mystack2.push(i);
+
+        for(int i = 0 ; i < 5 ; i++) mystack1.push(i);
+        for(int i = 0 ; i < 8 ; i++) mystack2.push(i);
+
 
         System.out.println("Context of stack one : ");
-        for(int i = 0 ; i < 10; i++) {
-            System.out.println(mystack1.pop());
+        for(int i = 0 ; i < 5; i++) {
+            System.out.print(mystack1.pop() + " ");
         }
+
         System.out.println("Context of stack two : ");
-        for(int i = 0 ; i < 10; i++)
-            System.out.println(mystack2.pop()) ;
+        for(int i = 0 ; i < 8; i++) {
+            System.out.print(mystack2.pop() + " ");
+        }
+
+
+
 
 
     }
