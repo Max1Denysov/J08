@@ -1,20 +1,12 @@
-class StatClassOne {
-    static int a = 3;
-    static int b = 99;
 
-    static void meth() {
-        System.out.println("A = " + a);
-
-    }
-
-
-
-
-}
 class StatClass {
+
     public static void main(String args[]){
-        StatClassOne.meth();
-        System.out.println("B = " + StatClassOne.b);
+        int a1[] = new int[10];
+        int a2[] = {2,3,4,5,3,2,1};
+
+        System.out.println("a1 length = " + a1[6]);
+        System.out.println("a2 length = " + a2.length);
 
     }
 }
