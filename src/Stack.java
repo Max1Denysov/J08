@@ -1,6 +1,6 @@
 
 class test{
-    private int stck[] = new int[10];
+    private int stck[] ;
     private int tos;
     test(int size){
         stck = new int[size];
