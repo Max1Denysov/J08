@@ -3,15 +3,15 @@ class stack{
     private int last; // пороговое значение
 
     stack(int size){
-        last = -1;// пороговое значение -1 означает пустой стек, так как при i++( -1 + 1 = 0 )
+        last = -1;// номер последнего элемента, значение -1 означает пустой стек, так как при i++( -1 + 1 = 0 )
         Mstack = new int[size];// инициализируем стек указываем его размер
     }
 
     void push(int item){ // метод токания в стек
-        if(last == Mstack.length - 1) // если порог равен размеру стека то выводем сообщение что стек заполнен
+        if(last == Mstack.length - 1) // если последний равен размеру стека то выводем сообщение что стек заполнен
             System.out.println("Full stack");
         else
-             Mstack[++last] = item; // иначе увеличиваем пороговое значение на 1
+             Mstack[++last] = item; // иначе увеличиваем последнее значение на 1
     }
 
     int pop(){
@@ -35,15 +35,15 @@ public class MyStack {
         for(int i = 0; i < 6; i++)mystack1.push(i);
         for(int i = 10; i < 20 ; i++)mystack2.push(i);
 
-        System.out.println(" stack one:");
+        System.out.println("Stack one have:");
         for(int i = 0;i < 5 ; i++) {
-            System.out.println(mystack1.pop());
+            System.out.print(mystack1.pop() + " ");
         }
 
 
-        System.out.println(" stack two:");
+        System.out.println("\nStack two have:");
         for(int i = 0;i < 10 ; i++) {
-            System.out.println(mystack2.pop());
+            System.out.print(mystack2.pop() + " ");
         }
     }
 }
