@@ -1,20 +1,20 @@
-class StatClass{
+class StatClassOne {
     static int a = 3;
-    static int b;
-    static void meth(int x){
-        System.out.println("X = " + x);
+    static int b = 99;
+
+    static void meth() {
         System.out.println("A = " + a);
-        System.out.println("B = " + b);
-    }
-    static {
-        System.out.println("metod static initialization");
-        b = a * 4;
+
     }
 
 
 
+
+}
+class StatClass {
     public static void main(String args[]){
-        meth(24);
+        StatClassOne.meth();
+        System.out.println("B = " + StatClassOne.b);
 
     }
 }
