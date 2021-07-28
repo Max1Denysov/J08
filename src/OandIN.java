@@ -1,15 +1,18 @@
 class level_one{
-    int one_x = 100;
+    int x = 100;
 
     void test_one(){
-        level_two one =new level_two();
-        one.test_two();
-    }
-    class level_two{
-        void test_two(){
-            System.out.println("one_x = " + one_x);
+        for(int i = 0; i < 10; i++){
+            class level_two{
+                void display(){
+                    System.out.println("x = "+ x);
+                }
+            }
+            level_two one = new level_two();
+            one.display();
         }
     }
+
 }
 
 
