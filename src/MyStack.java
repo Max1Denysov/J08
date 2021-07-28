@@ -36,7 +36,7 @@ public class MyStack {
         for(int i = 10; i < 20 ; i++)mystack2.push(i);
 
         System.out.println("Stack one have:");
-        for(int i = 0;i < 5 ; i++) {
+        for(int i = 0;i < 6 ; i++) {
             System.out.print(mystack1.pop() + " ");
         }
 
